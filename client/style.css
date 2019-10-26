@@ -1,0 +1,14 @@
+.header {
+     text-align: center;
+     font-weight: bold;
+     font-size: 30px;
+     color: rgb(0, 0, 0);
+     background: rgba(221, 223, 219, 0.8);
+     border-radius: 10px;
+ }
+
+.center {
+    display: block;
+    margin: auto;
+    width: 85%;
+}
