@@ -18,3 +18,5 @@ Allows you to control computers connected to your network using browser as the c
 
 ## Author
 * [LordGhostX](https://github.com/LordGhostX)
+
+Credits to [Misterion777](https://github.com/Misterion777/PyRemoteDesktop) for the starter code
