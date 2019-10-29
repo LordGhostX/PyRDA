@@ -2,11 +2,7 @@ import datetime
 import io
 import socket
 import pyautogui
-from random import randint
-from win32api import GetSystemMetrics
 import tornado.ioloop, tornado.locks, tornado.template, tornado.web, tornado.websocket
-
-WIDTH, HEIGHT = GetSystemMetrics(0), GetSystemMetrics(1)
 
 def take_ss():
     byte_arr = io.BytesIO()
@@ -31,7 +27,8 @@ class MainHandler(tornado.web.RequestHandler):
 
 class WSHandler(tornado.websocket.WebSocketHandler):
     def open(self):
-        self.write_message("size {} {}".format(WIDTH, HEIGHT))
+        prtsc = pyautogui.screenshot()
+        self.write_message("size {} {}".format(prtsc.width, prtsc.height))
         self.send_ss()
 
     def on_message(self, message):
